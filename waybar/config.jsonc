@@ -1,0 +1,62 @@
+// -*- mode: jsonc -*-
+{
+  "layer": "top",
+  "position": "top",
+  "height": 38,
+  "spacing": 6,
+  "margin": "15 15 0 15",
+
+  "modules-left": ["hyprland/workspaces", "network", "mpris"],
+  "modules-center": ["hyprland/window"],
+  "modules-right": ["tray", "cpu", "memory", "battery", "wireplumber", "clock"],
+
+
+  "hyprland/window": {
+    "max-length": 60
+  },
+  "cpu": {
+    "interval": 1,
+    "format": " {usage}%",
+    "max-length": 10
+  },
+  "memory": {
+    "interval": 1,
+    "format": "  {percentage}%",
+    "max-length": 10
+  },
+  "battery": {
+    "format": "{icon}  {capacity}%",
+    "format-icons": [ "","","","",""]
+  },
+  "network": {
+    // "interface": "wlp2s0",
+    "format": "  {essid}",
+    "format-ethernet": "󰈀 {ipaddr}/{cipr}",
+    "format-disconnected": "",
+    "on-click": "nm-connection-editor"
+  },
+  "tray": {
+    "spacing": 4
+  },
+  "clock": {
+    "timezone": "Pacific/Auckland", // Adjust this to your own needs
+    "tooltip-format": "{:%r}",
+    "interval": 1,
+    "format": "{:%r}"
+  },
+  "wireplumber": {
+    "scroll-step": 5,
+    "max-volume": 150,
+    "format": "  {volume}%",
+    "format-muted": "  0%",
+    "on-click": "pavucontrol"
+  },
+  "mpris": {
+    "format": "{player_icon} {title}",
+    "player-icons": {
+      "default": " "
+    },
+    "title-len": 30,
+    "ignored-players": ["firefox"]
+  }
+}

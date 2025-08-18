@@ -1,0 +1,84 @@
+@import 'theme.css';
+
+* {
+  font-family: 'CaskaydiaCove Nerd Font';
+}
+
+window#waybar {
+  background-color: @crust;
+  border: 2px solid @blue;
+  border-radius: 12px;
+}
+
+tooltip {
+  color: @text;
+  background-color: @crust;
+}
+
+.modules-left,
+.modules-center,
+.modules-right {
+  padding: 8px;
+}
+
+#workspaces,
+#mpris,
+#cpu,
+#memory,
+#network,
+#window,
+#tray,
+#battery,
+#wireplumber,
+#clock {
+  color: @text;
+  background-color: @base;
+
+  padding: 0 8px;
+
+  border-radius: 8px;
+}
+
+#window {
+  background-color: transparent;
+}
+
+#tray menu {
+  background-color: @crust;
+}
+#tray menu menuitem {
+  color: @text;
+
+  transition-property: background-color;
+  transition-duration: 0.25s;
+}
+#tray menu menuitem:hover {
+  background-color: @base;
+}
+
+#workspaces {
+  padding: 0;
+}
+#workspaces button {
+  min-width: 0;
+
+  color: @text;
+  background-color: @base;
+
+  padding: 0 10px;
+
+  border-radius: 8px;
+
+  transition-property: background-color, color;
+  transition-duration: 0.5s;
+}
+#workspaces button:hover {
+  background-color: @surface0;
+}
+#workspaces button.active {
+  color: @base;
+  background-color: @blue;
+}
+#workspaces button.urgent {
+  color: @red;
+}
