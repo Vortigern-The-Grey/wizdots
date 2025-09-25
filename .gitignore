@@ -1,0 +1,29 @@
+# Ignore everything by default
+*
+
+# Include gitignore and gitmodules
+!.gitignore
+!.gitmodules
+
+# Include folder for nvim config
+!nvim/
+!nvim/**
+
+# Include folders for rices
+!hypr/
+!hypr/**
+!kitty/
+!kitty/**
+!waybar/
+!waybar/**
+!wofi/
+!wofi/**
+!swaync/
+!swaync/**
+!themes/
+!themes/**
+
+# Include Anytype css
+!anytype/
+anytype/*
+!anytype/custom.css
